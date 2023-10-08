@@ -1,0 +1,64 @@
+<div class="container my-5">
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6 ">
+      <a href="/"
+        class="btn btn-sm btn-primary mb-3">View All Product</a>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Update single product</h2>
+        </div>
+        <div class="card-body">
+          <form action="/update/<%= product.id %>"
+            enctype="multipart/form-data"
+            method="POST">
+            <div class="my-3">
+              <label for="">Product Name</label>
+              <input class="form-control"
+                name="name"
+                value="<%= product.name %>"
+                type="text">
+            </div>
+            <div class="my-3">
+              <label for="">Sale Price</label>
+              <input class="form-control"
+                name="salePrice"
+                value="<%= product.salePrice %>"
+                type="text">
+            </div>
+            <div class="my-3">
+              <label for="">Regular Price</label>
+              <input class="form-control"
+                value="<%= product.regularPrice %>"
+                name="regularPrice"
+                type="text">
+            </div>
+            <div class="my-3">
+              <label for="">Stock</label>
+              <input class="form-control"
+                value="<%= product.stock %>"
+                name="stock"
+                type="text">
+            </div>
+            <div class="my-3">
+              <label for="">Photo</label>
+              <img class="w-100"
+                src="/product/<%= product.photo %>"
+                alt="">
+              <input class="form-control"
+                name="productPhoto"
+                type="file">
+            </div>
+            <div class="my-3">
+              <button type="submit"
+                class="btn btn-primary form-control">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
